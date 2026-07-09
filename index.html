@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Member Directory</title>
+<meta name="description" content="Browse member profiles" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <h1 class="brand">Member Directory</h1>
+      <span id="resultCount" class="result-count"></span>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="controls" aria-label="Search and filters">
+      <input
+        id="searchInput"
+        type="search"
+        placeholder="Search by name or bio…"
+        aria-label="Search members"
+        autocomplete="off"
+      />
+
+      <div class="filter-row">
+        <select id="genderFilter" aria-label="Filter by gender">
+          <option value="">All genders</option>
+        </select>
+
+        <select id="countryFilter" aria-label="Filter by country">
+          <option value="">All countries</option>
+        </select>
+
+        <select id="sortSelect" aria-label="Sort members">
+          <option value="name">Sort: Name (A–Z)</option>
+          <option value="newest">Sort: Newest members</option>
+          <option value="active">Sort: Recently active</option>
+        </select>
+
+        <label class="checkbox-label">
+          <input type="checkbox" id="vipFilter" /> VIP only
+        </label>
+        <label class="checkbox-label">
+          <input type="checkbox" id="verifiedFilter" /> Verified only
+        </label>
+        <label class="checkbox-label">
+          <input type="checkbox" id="onlineFilter" /> Online only
+        </label>
+      </div>
+    </section>
+
+    <section id="grid" class="grid" aria-live="polite"></section>
+
+    <p id="emptyState" class="empty-state hidden">No members match your filters.</p>
+    <div id="loadingState" class="loading-state">Loading members…</div>
+    <div id="sentinel" aria-hidden="true"></div>
+  </main>
+
+  <footer class="site-footer">
+    <p>Member Directory</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>

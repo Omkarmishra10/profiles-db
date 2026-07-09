@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Member Profile</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a href="index.html" class="back-link">&larr; Back to directory</a>
+    </div>
+  </header>
+
+  <main class="container profile-container">
+    <div id="loadingState" class="loading-state">Loading profile…</div>
+    <div id="notFound" class="empty-state hidden">
+      <p>Member not found.</p>
+      <a href="index.html">Return to directory</a>
+    </div>
+
+    <article id="profileCard" class="profile-card hidden">
+      <div class="profile-hero">
+        <img id="profilePhoto" class="profile-photo" alt="" />
+        <div class="profile-hero-info">
+          <h1 id="profileName" class="profile-name"></h1>
+          <div id="profileBadges" class="badge-row"></div>
+          <p id="profileLocation" class="profile-location"></p>
+        </div>
+      </div>
+
+      <section class="profile-section">
+        <h2>About</h2>
+        <p id="profileBio" class="profile-bio"></p>
+      </section>
+
+      <section class="profile-section">
+        <h2>Details</h2>
+        <dl class="detail-list">
+          <div class="detail-item">
+            <dt>Gender</dt>
+            <dd id="detailGender">—</dd>
+          </div>
+          <div class="detail-item">
+            <dt>Native language</dt>
+            <dd id="detailLanguage">—</dd>
+          </div>
+          <div class="detail-item">
+            <dt>Country</dt>
+            <dd id="detailCountry">—</dd>
+          </div>
+          <div class="detail-item">
+            <dt>Member since</dt>
+            <dd id="detailJoined">—</dd>
+          </div>
+          <div class="detail-item">
+            <dt>Last active</dt>
+            <dd id="detailActive">—</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section id="vibesSection" class="profile-section hidden">
+        <h2>Vibes</h2>
+        <div id="vibesList" class="tag-row"></div>
+      </section>
+
+      <section id="gallerySection" class="profile-section hidden">
+        <h2>Gallery</h2>
+        <div id="galleryGrid" class="gallery-grid"></div>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <p>Member Directory</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/profile.js"></script>
+</body>
+</html>

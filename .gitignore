@@ -1,0 +1,4 @@
+# Never commit the raw export — it contains emails, IP history, push tokens,
+# and moderation flags for real users. Only data/users.json (sanitized) ships.
+dumped_users.json
+*.dump.json
